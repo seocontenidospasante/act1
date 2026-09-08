@@ -10,6 +10,7 @@ function moveCarousel() {
   track.style.transition = 'transform 0.6s ease-in-out';
   track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
+
   
   dots.forEach((dot, index) => {
     dot.classList.toggle('active', index === (currentIndex % totalRealSlides));
