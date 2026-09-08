@@ -4,23 +4,18 @@
   padding: 0;
 }
 
-/* Centrado horizontal y vertical en toda la pantalla */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 40vh;
+  width: 100%;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
-/* Contenedor principal centrado */
+
 .carousel-container {
   position: relative;
-  width: 90%;
-  max-width: 800px;
+  width: 100%;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  border-radius: 0;
 }
 
 .carousel-track {
@@ -33,14 +28,17 @@ body {
   width: 100%;
 }
 
+
 .slide img {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  height: 50vh;
+  min-height: 300px;
+  max-height: 480px;
+  object-fit: contain; 
+  background-color: #e26d9e; 
   display: block;
 }
 
-/* Indicadores inferiores */
 .carousel-dots {
   position: absolute;
   bottom: 15px;
