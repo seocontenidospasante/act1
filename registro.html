@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Registro de Usuario - Hello Kitty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">hello kitty</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="error.html">Servicios</a></li>
+                <li><a href="error.html">Nosotros</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="auth-card">
+            <h2>Crear Cuenta</h2>
+            <p class="auth-subtitle">Regístrate para formar parte de la plataforma</p>
+
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="regNombre">Nombre Completo</label>
+                    <input type="text" id="regNombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regEmail">Correo Electrónico</label>
+                    <input type="email" id="regEmail" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regPassword">Contraseña</label>
+                    <input type="password" id="regPassword" placeholder="••••••••" minlength="6" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regConfirmPassword">Confirmar Contraseña</label>
+                    <input type="password" id="regConfirmPassword" placeholder="••••••••" required>
+                </div>
+
+                <div id="registerMessage" class="form-message"></div>
+
+                <button type="submit" class="btn-primary">Registrarse</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+</html>
