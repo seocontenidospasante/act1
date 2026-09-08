@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-/* Centrado horizontal y vertical en toda la pantalla */
+
 body {
   display: flex;
   justify-content: center;
@@ -13,7 +13,7 @@ body {
   background-color: #ffffff;
 }
 
-/* Contenedor principal centrado */
+
 .carousel-container {
   position: relative;
   width: 90%;
@@ -40,7 +40,7 @@ body {
   display: block;
 }
 
-/* Indicadores inferiores */
+
 .carousel-dots {
   position: absolute;
   bottom: 15px;
