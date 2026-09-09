@@ -358,3 +358,121 @@ body {
   color: #1d4ed8;
   font-weight: bold;
 }
+
+/* --- Estilos del Panel de Administración --- */
+
+.admin-card {
+  max-width: 550px;
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  color: #333;
+  outline: none;
+}
+
+.form-select:focus {
+  border-color: #1d4ed8;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.btn-secondary {
+  width: 100%;
+  background-color: #64748b;
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #475569;
+}
+
+/* Tabla de usuarios */
+.admin-table-container {
+  max-width: 900px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.users-table th, 
+.users-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.users-table th {
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Badges de Rol */
+.badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge-admin {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge-user {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+/* Botones de acción */
+.btn-action {
+  border: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 0.3rem;
+  transition: opacity 0.2s ease;
+}
+
+.btn-action:hover {
+  opacity: 0.85;
+}
+
+.btn-edit {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+
+.btn-danger {
+  background-color: #dc2626;
+  color: #ffffff;
+}

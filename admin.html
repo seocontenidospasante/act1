@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Panel de Administración - Hello Kitty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">hello kitty</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="admin.html" class="active-link">Administrar Usuarios</a></li>
+                <li><a href="#" onclick="logout()">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Formulario para Crear / Editar Usuario -->
+        <div class="auth-card admin-card">
+            <h2 id="formTitle">Crear Nuevo Usuario</h2>
+            <p class="auth-subtitle">Ingresa los datos para registrar un nuevo usuario en la plataforma</p>
+
+            <form id="userForm" class="auth-form">
+                <input type="hidden" id="userId">
+
+                <div class="form-group">
+                    <label for="userNombre">Nombre Completo</label>
+                    <input type="text" id="userNombre" placeholder="Ej: María Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userEmail">Correo Electrónico</label>
+                    <input type="email" id="userEmail" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userPassword">Contraseña</label>
+                    <input type="password" id="userPassword" placeholder="••••••••">
+                </div>
+
+                <div class="form-group">
+                    <label for="userRole">Rol del Usuario</label>
+                    <select id="userRole" class="form-select">
+                        <option value="user">Usuario Estándar</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+
+                <div id="adminMessage" class="form-message"></div>
+
+                <div class="btn-group">
+                    <button type="submit" id="btnSubmitForm" class="btn-primary">Crear Usuario</button>
+                    <button type="button" id="btnCancelEdit" class="btn-secondary" onclick="cancelEdit()" style="display: none;">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Tabla de Gestión de Usuarios -->
+        <div class="white-container admin-table-container">
+            <h2>Usuarios Registrados</h2>
+            <p>Lista general de usuarios guardados en el sistema</p>
+
+            <div class="table-responsive">
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody">
+                        <!-- Cargas dinámicas con JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+</html>
